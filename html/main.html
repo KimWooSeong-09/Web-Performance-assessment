@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko"> <!-- 문서의 언어를 한국어로 설정 -->
+<head>
+  <meta charset="UTF-8" /> <!-- 문자 인코딩을 UTF-8로 설정 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- 반응형 웹 설정 -->
+  <title>Trade Kind</title> <!-- 브라우저 탭 제목 -->
+  <link rel="stylesheet" href="../css/main.css" /> <!-- 외부 CSS 연결 -->
+</head>
+<body onload="win(); loadPage('fair_trade_explain.html')"> <!-- 페이지 로드 시 자바스크립트 함수 실행 -->
+
+  <!-- 상단 헤더 영역 -->
+  <header>
+    <!-- 로고 클릭 시 메인 소개 페이지 로드 -->
+    <a href="#" onclick="loadPage('fair_trade_explain.html')">
+      <img src="https://lh6.googleusercontent.com/proxy/2NZ8vJirkAVRXMhJ-HSRzfpZNrx_Ky0R-cFh-ZVq5z1jCQTUOwlJyKl6oirGDq0qOXpgdfjTzYdFHe1RSDkVTOAJNB-nLYNiACASM5DGqWbEAMXaBKUBVHzpp-jl70hDnZ8xPA" 
+           alt="공정무역 로고">
+      <span class="site-title">Trade Kind</span>
+    </a>
+
+    <!-- 오른쪽 상단: 검색창 + 로그인/회원가입 -->
+    <ul>
+      <li>
+        <form id="searchForm">
+          <input type="text" id="searchInput" placeholder="검색어를 입력하세요" />
+          <button type="submit">검색</button>
+        </form>
+      </li>
+      <li><a href="javascript:void(0)">로그인</a></li>
+      <li><a href="javascript:void(0)">회원가입</a></li>
+    </ul>
+  </header>
+
+  <!-- 메인 네비게이션 메뉴 -->
+  <nav id="nav_main">
+    <ul>
+      <li><a href="#" onclick="loadPage('fair_trade_explain.html')">공정무역 소개</a></li>
+      <li><a href="#" onclick="loadPage('fair_trade_items.html')">공정무역 제품 소개</a></li>
+      <li><a href="#" onclick="loadPage('buy_items.html')">구매 안내</a></li>
+      <li><a href="javascript:void(0)">문의하기</a></li>
+      <li><a href="javascript:void(0)">교육자료</a></li>
+    </ul>
+  </nav>
+
+  <!-- 서브 메뉴 자리 (아직 내용 없음) -->
+  <nav id="nav_sub">
+  </nav>
+
+  <!-- 메인 콘텐츠: iframe으로 내용 불러오기 -->
+  <main>
+    <iframe id="contentFrame" src="" width="100%" height="600" style="border: none;"></iframe>
+  </main>
+  
+  <!-- 하단 푸터 영역 -->
+  <footer>
+    <p>© 2025 Trade Kind. All rights reserved.</p>
+    <p>이 사이트는 공익용으로 제작되었습니다.</p>
+    <p>개인정보 처리방침 | 이용약관</p>
+    <p>무단 복제 및 재배포 금지. 모든 콘텐츠는 저작권법에 의해 보호받습니다.</p>
+  </footer>
+  
+  <!-- 외부 자바스크립트 연결 -->
+  <script src="../js/main.js"></script>
+</body>
+</html>
