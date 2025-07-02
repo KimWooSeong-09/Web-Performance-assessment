@@ -1,0 +1,219 @@
+/* 구글 폰트 불러오기 - Dongle, Noto Sans KR */
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* body 기본 스타일 초기화 및 폰트 설정 */
+body {
+  margin: 0;  /* 기본 여백 제거 */
+  font-family: 'Noto Sans KR', sans-serif;  /* 한글과 영문 혼용 폰트 */
+}
+
+a {
+  text-decoration: none;     /* a태그 밑줄 제거 */
+}
+
+.logo-container {
+  display: flex;             /* 가로 정렬 */
+  align-items: center;       /* 세로 가운데 정렬 핵심! */
+  gap: 10px;                 /* 로고와 텍스트 사이 간격 */
+  cursor: pointer;
+  user-select: none;         /* 선택 방지 (선택하고 싶으면 제거) */
+}
+
+.logo-container img {
+  height: 48px;              /* 로고 크기 조절 */
+  display: block;            /* 이미지 아래 공백 제거 */
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;            /* 줄 높이 딱 맞춤 */
+  color: #222;
+}
+
+/* 헤더 영역 스타일 */
+header {
+  display: flex;  /* 플렉스 박스 사용해 가로 배치 */
+  justify-content: space-between;  /* 좌우 끝 정렬 */
+  align-items: center;  /* 수직 중앙 정렬 */
+  padding: 10px 20px;  /* 안쪽 여백 */
+  background-color: #f9f9f9;  /* 연한 배경색 */
+  border-bottom: 1px solid #ccc;  /* 아래쪽 경계선 */
+}
+
+/* 헤더 내 이미지 크기 지정 */
+header img {
+  height: 50px;  /* 높이 고정 */
+}
+
+/* 헤더 내 네비게이션 목록 스타일 */
+header ul {
+  display: flex;  /* 가로 배치 */
+  list-style: none;  /* 기본 점 제거 */
+  margin: 0;  /* 기본 외부 여백 제거 */
+  padding: 0;  /* 기본 안쪽 여백 제거 */
+  gap: 15px;  /* 아이템 간격 */
+  align-items: center;  /* 수직 중앙 정렬 */
+}
+
+/* 리스트 항목을 인라인 블록으로 */
+header ul li {
+  display: inline-block;
+}
+
+/* 네비게이션 링크 스타일 */
+header ul li a {
+  text-decoration: none;  /* 밑줄 제거 */
+  color: black;  /* 글자색 검정 */
+  font-weight: bold;  /* 굵게 */
+}
+
+/* 폼 요소는 플렉스로 가로 배치 및 중앙 정렬 */
+header ul li form {
+  display: flex;
+  align-items: center;
+  gap: 5px;  /* 아이템 간격 */
+}
+
+/* 검색 입력창 스타일 */
+#searchInput {
+  padding: 5px 10px;  /* 안쪽 여백 */
+  border: 1px solid #ccc;  /* 연한 회색 테두리 */
+  border-radius: 5px;  /* 둥근 모서리 */
+}
+
+/* 헤더 내 버튼 스타일 */
+header button {
+  padding: 5px 10px;
+  border: none;  /* 테두리 제거 */
+  border-radius: 5px;
+  background-color: #4CAF50;  /* 초록색 배경 */
+  color: white;  /* 흰색 글자 */
+  cursor: pointer;  /* 마우스 포인터 변경 */
+}
+
+/* 버튼 호버 시 배경색 변경 */
+header button:hover {
+  background-color: #45a049;
+}
+
+/* 메인 네비게이션 바 스타일 */
+#nav_main > ul {
+  display: flex;
+  justify-content: center;  /* 중앙 정렬 */
+  align-items: center;
+  gap: 30px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #f0f0f0;  /* 연한 회색 배경 */
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+}
+
+/* 메인 네비게이션 링크 스타일 */
+#nav_main ul li a {
+  text-decoration: none;
+  color: #333;  /* 짙은 회색 */
+}
+
+/* 서브 네비게이션 영역 배경 및 크기 */
+#nav_sub {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-image: url("https://mblogthumb-phinf.pstatic.net/MjAyMTExMTVfMTAw/MDAxNjM2OTQwNTE3NzU4.LQ-9aLQ97Cma6_MxNb40B7xA6aK0vu-QH1UALDr-z9gg.d4KjXZRzVYugUeKQIFeAvgpnamtqixG6SfUYDVILwZUg.PNG.baruncoop1985/%EA%B3%B5%EC%A0%95%EB%AC%B4%EC%97%AD.png?type=w800");
+  background-size: contain;  /* 이미지 크기 맞춤 */
+  background-position: center;  /* 중앙 정렬 */
+  background-attachment: fixed;  /* 스크롤해도 고정 */
+}
+
+/* 서브 네비게이션 안 이미지 위치 및 크기 */
+#nav_sub img {
+  position: absolute;  /* 부모 기준 절대 위치 */
+  width: 300px;
+  height: 200px;
+  border-radius: 30px;  /* 둥근 모서리 */
+  right: 100px;  /* 오른쪽에서 100px 떨어짐 */
+  top: 50px;  /* 위에서 50px 떨어짐 */
+}
+
+/* 메인 콘텐츠 영역 크기 및 패딩 */
+main {
+  width: 100%;
+  min-height: 500px;  /* 최소 높이 */
+  padding: 20px;
+  position: relative;
+}
+
+/* iframe 등이 로드 안됐을 때 보여주는 텍스트 스타일 */
+#fallbackText {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-top: 20px;
+}
+
+/* 페이지 하단 푸터 스타일 */
+footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+/* 반응형 디자인 - 화면이 768px 이하일 때 적용 */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;  /* 세로 정렬로 변경 */
+    align-items: flex-start;  /* 왼쪽 정렬 */
+  }
+
+  header ul {
+    flex-direction: column;  /* 세로 정렬 */
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  #nav_main > ul {
+    flex-direction: column;  /* 세로 정렬 */
+    gap: 10px;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  #nav_sub {
+    height: auto;  /* 높이 자동 */
+    background-attachment: scroll;  /* 배경 스크롤됨 */
+  }
+
+  #nav_sub img {
+    position: static;  /* 기본 위치로 변경 */
+    width: 100%;  /* 가로 꽉 채움 */
+    height: auto;  /* 비율 유지 */
+    border-radius: 20px;
+    margin-top: 10px;
+  }
+
+  #pos {
+    position: static;
+    text-align: center;
+    margin: 10px 0;
+    color: yellow;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+  }
+
+  main {
+    padding: 10px;  /* 패딩 축소 */
+  }
+
+  footer {
+    font-size: 12px;  /* 글자 작게 */
+    padding: 15px;
+  }
+}
